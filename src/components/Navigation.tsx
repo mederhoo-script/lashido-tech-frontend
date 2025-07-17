@@ -47,12 +47,16 @@ const Navigation = () => {
             <Button variant="ghost" size="sm">
               <Search className="h-4 w-4" />
             </Button>
-            <Button variant="ghost" size="sm">
-              Login
-            </Button>
-            <Button size="sm" className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
-              Sign Up
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" size="sm">
+                Login
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button size="sm" className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
+                Sign Up
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -82,12 +86,16 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm" className="justify-start">
-                  Login
-                </Button>
-                <Button size="sm" className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
-                  Sign Up
-                </Button>
+                <Link to="/login" onClick={() => setIsOpen(false)}>
+                  <Button variant="ghost" size="sm" className="justify-start">
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/register" onClick={() => setIsOpen(false)}>
+                  <Button size="sm" className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
